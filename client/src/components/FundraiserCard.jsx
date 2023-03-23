@@ -113,10 +113,10 @@ const FundraiserCard = (props) => {
       const imageURL = await instance.methods.imageURL().call()
       const url = await instance.methods.url().call()
 
-      const exchangeRate = "1000"
-      setExchangeRate(exchangeRate.USD)
+      const exchangeRate = 1000
+      setExchangeRate(exchangeRate)
       const eth = web3.utils.fromWei(totalDonations, 'ether')
-      const dollarDonationAmount = exchangeRate.USD * eth
+      const dollarDonationAmount = exchangeRate* eth
 
       setTotalDonations(dollarDonationAmount.toFixed(2))
       setFundname(name)
